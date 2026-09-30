@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    background-image: url("../assets/images/greenpath-bg.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Soft overlay */
+
+.login-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(245, 241, 216, 0.12);
+    pointer-events: none;
+}
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+    position: relative;
+    z-index: 2;
+    width: 540px;
+    max-width: 95%;
+    padding: 42px 48px 40px;
+    background: rgba(255, 253, 241, 0.93);
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 50px rgba(43, 72, 43, 0.20);
+    backdrop-filter: blur(3px);
+    text-align: center;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.logo-leaf {
+    font-size: 34px;
+    line-height: 1;
+}
+
+.logo h1 {
+    font-size: 39px;
+    font-weight: 600;
+    color: #285438;
+    letter-spacing: -1px;
+}
+
+/* =========================
+   TAGLINE
+========================= */
+
+.tagline {
+    color: #718071;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 36px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.login-card h2 {
+    color: #244f32;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.subtitle {
+    color: #7c817c;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    text-align: left;
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    color: #285238;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.input-box {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 17px;
+    border: 1.5px solid #cdd5c9;
+    border-radius: 13px;
+    background: rgba(255, 255, 250, 0.72);
+    transition: 0.2s;
+}
+
+.input-box:focus-within {
+    border-color: #527d52;
+    box-shadow: 0 0 0 3px rgba(82, 125, 82, 0.10);
+}
+
+.input-icon {
+    width: 25px;
+    font-size: 21px;
+    color: #396647;
+    flex-shrink: 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #294d35;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.input-box input::placeholder {
+    color: #999f9a;
+}
+
+/* =========================
+   PASSWORD BUTTON
+========================= */
+
+.eye-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    color: #416548;
+    padding: 4px;
+}
+
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.forgot-container {
+    text-align: right;
+    margin-top: -3px;
+    margin-bottom: 25px;
+}
+
+.forgot-container a {
+    color: #17643d;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.forgot-container a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 32px;
+    background: linear-gradient(90deg, #4e814c, #548b51);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    background: linear-gradient(90deg, #426f40, #4a7d47);
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   LOGIN MESSAGE
+========================= */
+
+#loginMessage {
+    min-height: 20px;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    color: #4d7557;
+    background: rgba(225, 230, 203, 0.55);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+    .login-page {
+        padding: 20px 12px;
+        align-items: center;
+    }
+
+    .login-card {
+        width: 100%;
+        padding: 32px 24px;
+    }
+
+    .logo h1 {
+        font-size: 32px;
+    }
+
+    .login-card h2 {
+        font-size: 30px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   FORGOT PASSWORD / OTP
+========================= */
+
+.back-login {
+    margin-top: 25px;
+}
+
+.back-login a {
+    color: #17643d;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.back-login a:hover {
+    text-decoration: underline;
+}
+
+#forgotMessage,
+#otpMessage,
+#resetMessage {
+    min-height: 20px;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    color: #4d7557;
+    background: rgba(225, 230, 203, 0.55);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.demo-otp {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #285438;
+}

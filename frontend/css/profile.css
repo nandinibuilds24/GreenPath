@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #174b2d;
+
+    background-image:
+
+        linear-gradient(
+            rgba(248, 247, 226, 0.72),
+            rgba(248, 247, 226, 0.80)
+        ),
+
+        url("../assets/images/greenpath-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+.profile-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+.profile-card {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border:
+        1px solid #dce8d9;
+
+    border-radius: 24px;
+
+    padding: 38px 42px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(50, 90, 60, 0.14);
+}
+
+
+/* PROFILE HEADER */
+
+.profile-top {
+
+    text-align: center;
+}
+
+
+.profile-avatar {
+
+    width: 82px;
+
+    height: 82px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e3f0df;
+
+    font-size: 38px;
+
+    border:
+        1px solid #d0e3cb;
+}
+
+
+.profile-top h1 {
+
+    font-size: 27px;
+
+    color: #174b2d;
+
+    font-weight: 700;
+}
+
+
+.profile-top p {
+
+    margin-top: 6px;
+
+    color: #718178;
+
+    font-size: 14px;
+}
+
+
+.profile-divider {
+
+    height: 1px;
+
+    background: #e1e9df;
+
+    margin:
+        30px 0;
+}
+
+
+/* ACCOUNT INFORMATION */
+
+.account-section h2 {
+
+    font-size: 20px;
+
+    color: #174b2d;
+
+    margin-bottom: 18px;
+}
+
+
+.detail-list {
+
+    border:
+        1px solid #e0e9dd;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+.detail-item {
+
+    padding:
+        17px 20px;
+
+    border-bottom:
+        1px solid #e7eee5;
+}
+
+
+.detail-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.detail-label {
+
+    font-size: 12px;
+
+    color: #789080;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+}
+
+
+.detail-value {
+
+    font-size: 16px;
+
+    color: #174b2d;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* LOGOUT */
+
+.profile-actions {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.logout-button {
+
+    width: 180px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #36794b;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.logout-button:hover {
+
+    background: #28623a;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .profile-page {
+
+        padding:
+            25px 15px;
+    }
+
+
+    .profile-card {
+
+        padding:
+            30px 22px;
+
+        border-radius: 20px;
+    }
+
+
+    .profile-top h1 {
+
+        font-size: 24px;
+    }
+
+
+    .detail-item {
+
+        padding:
+            15px 16px;
+    }
+}

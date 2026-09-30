@@ -1,0 +1,18 @@
+/* =========================
+   FORGOT PASSWORD
+========================= */
+
+.back-login {
+    margin-top: 25px;
+}
+
+.back-login a {
+    color: #17643d;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.back-login a:hover {
+    text-decoration: underline;
+}

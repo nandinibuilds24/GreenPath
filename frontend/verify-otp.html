@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        GreenPath | Verify OTP
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="login-page">
+
+<section class="login-card">
+
+
+    <div class="logo">
+
+        <div class="logo-leaf">
+            🌿
+        </div>
+
+        <h1>
+            GreenPath
+        </h1>
+
+    </div>
+
+
+    <p class="tagline">
+        Your simple path to every service
+    </p>
+
+
+    <h2>
+        Verify OTP
+    </h2>
+
+
+    <p class="subtitle">
+        Enter the 6-digit code sent to your email
+    </p>
+
+
+    <form id="otpForm">
+
+
+        <div class="form-group">
+
+            <label for="otp">
+                6-Digit OTP
+            </label>
+
+            <div class="input-box">
+
+                <span class="input-icon">
+                    🔐
+                </span>
+
+                <input
+                    type="text"
+                    id="otp"
+                    placeholder="Enter 6-digit OTP"
+                    maxlength="6"
+                    inputmode="numeric"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="login-button"
+        >
+            Verify OTP
+        </button>
+
+
+        <p id="otpMessage"></p>
+
+
+    </form>
+
+
+    <div class="back-login">
+
+        <a href="forgot-password.html">
+            ← Change Email Address
+        </a>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+<script src="js/verify-otp.js"></script>
+
+</body>
+
+</html>

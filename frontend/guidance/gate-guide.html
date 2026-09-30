@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPath | GATE Guide</title>
+    <link rel="stylesheet" href="../css/gate-guide.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PRIVACY SCREEN
+    ========================== -->
+
+    <div id="privacyScreen" class="privacy-screen">
+
+        <div class="privacy-card">
+
+            <div class="privacy-icon">
+                🔒
+            </div>
+
+            <h1>
+                Your Privacy Matters
+            </h1>
+
+            <p class="privacy-intro">
+                GreenPath will never ask you to type
+                or send your personal information.
+            </p>
+
+            <div class="privacy-list">
+
+                <div>✓ Aadhaar number</div>
+                <div>✓ Mobile number</div>
+                <div>✓ Address</div>
+                <div>✓ Date of birth</div>
+                <div>✓ Other personal details</div>
+
+            </div>
+
+            <p class="privacy-note">
+                GreenPath only shows you where
+                information is located and where to
+                write it on the official form.
+            </p>
+
+            <button
+                type="button"
+                class="continue-button"
+                onclick="continueToGuide()"
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         GATE GUIDE
+    ========================== -->
+
+    <main id="gateGuide" class="gate-page hidden">
+
+        <!-- HEADER -->
+
+        <header class="gate-header">
+
+            <button
+                class="back-button"
+                type="button"
+                onclick="goBack()"
+            >
+                ←
+            </button>
+
+            <div class="header-title">
+
+                <h1>
+                    GATE Guide
+                </h1>
+
+                <p>
+                    Step-by-step application guidance
+                </p>
+
+            </div>
+
+            <div class="progress-area">
+
+                <span id="progressText">
+                    Step 1 of 13
+                </span>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================
+             50 / 50 AREA
+        ========================== -->
+
+        <section class="guide-layout">
+
+            <!-- LEFT 50% -->
+
+            <section class="guide-card">
+
+                <div
+                    id="guideSteps"
+                    class="guide-steps"
+                ></div>
+
+                <div
+                    id="nextArea"
+                    class="next-area"
+                >
+
+                    <button
+                        id="nextButton"
+                        class="next-button"
+                        type="button"
+                        onclick="showNextStep()"
+                    >
+                        Next →
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- RIGHT 50% -->
+
+            <aside class="right-column">
+
+                <!-- VISUAL GUIDE -->
+
+                <section class="side-card visual-card">
+
+                    <div class="side-title">
+
+                        <span>
+                            👁
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Visual Guide
+                            </h2>
+
+                            <p>
+                                Follow the screen shown
+                                for the current step.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="image-container">
+
+                        <img
+                            id="guideImage"
+                            src="../assets/forms/gate/step-01.png"
+                            alt="GATE visual guide"
+                        >
+
+                    </div>
+
+                    <p
+                        id="visualText"
+                        class="visual-description"
+                    >
+                        Follow the screen shown
+                        for the current step.
+                    </p>
+
+                </section>
+
+                <!-- ASK GREENPATH -->
+
+                <section class="side-card ask-card">
+
+                    <div class="side-title">
+
+                        <span>
+                            💬
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Ask GreenPath
+                            </h2>
+
+                            <p>
+                                Get quick answers to your
+                                GATE questions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="questionButtons"
+                        class="question-buttons"
+                    ></div>
+
+                    <div class="chat-area">
+
+                        <input
+                            type="text"
+                            id="questionInput"
+                            placeholder="Type your question..."
+                        >
+
+                        <button
+                            type="button"
+                            onclick="askQuestion()"
+                        >
+                            ➤
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="chatAnswer"
+                        class="chat-answer"
+                    ></div>
+
+                </section>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <script src="../js/gate-guide.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenPath | Aadhaar Mobile Update Guide</title>
+
+    <link rel="stylesheet" href="css/aadhaar-guide.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PRIVACY SCREEN
+    ========================== -->
+
+    <div id="privacyScreen" class="privacy-screen">
+
+        <div class="privacy-card">
+
+            <div class="privacy-icon">
+                🔒
+            </div>
+
+            <h1>Your Privacy Matters</h1>
+
+            <p class="privacy-intro">
+                GreenPath will never ask you to type or send your personal information.
+            </p>
+
+            <div class="privacy-list">
+
+                <div>✓ Aadhaar number</div>
+                <div>✓ Mobile number</div>
+                <div>✓ Address</div>
+                <div>✓ Date of birth</div>
+                <div>✓ Other personal details</div>
+
+            </div>
+
+            <p class="privacy-note">
+                GreenPath only shows you where information is located
+                and where to write it on the official form.
+            </p>
+
+            <button
+                type="button"
+                class="continue-button"
+                onclick="continueToGuide()">
+
+                Continue
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         AADHAAR GUIDE
+    ========================== -->
+
+    <main id="aadhaarGuide" class="aadhaar-page hidden">
+
+        <!-- HEADER -->
+
+        <header class="guide-header">
+
+            <button
+                type="button"
+                class="back-button"
+                onclick="goBack()">
+
+                ← Back
+
+            </button>
+
+
+            <div class="header-title">
+
+                <h1>Aadhaar Mobile Number Update</h1>
+
+                <p>
+                    Step-by-step form guidance
+                </p>
+
+            </div>
+
+
+            <div class="progress-area">
+
+                <span id="progressText">
+                    Step 1 of 8
+                </span>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- TWO COLUMN LAYOUT -->
+
+        <section class="guide-layout">
+
+
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+
+            <section class="guide-card">
+
+                <div
+                    id="guideSteps"
+                    class="guide-steps">
+                </div>
+
+
+                <div
+                    id="nextArea"
+                    class="next-area">
+
+                    <button
+                        id="nextButton"
+                        type="button"
+                        class="next-button"
+                        onclick="showNextStep()">
+
+                        Next →
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 RIGHT SIDE
+            ========================== -->
+
+            <aside class="right-column">
+
+
+                <!-- VISUAL GUIDE -->
+
+                <section class="side-card visual-card">
+
+                    <div class="side-title">
+
+                        <span>👁</span>
+
+                        <div>
+
+                            <h2>Visual Guide</h2>
+
+                            <p>
+                                Follow the image for the current step.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="image-container">
+
+                        <img
+                            id="guideImage"
+                            src=""
+                            alt="Aadhaar form visual guide">
+
+                    </div>
+
+
+                    <p
+                        id="visualText"
+                        class="visual-description">
+
+                        The image for the current step will appear here.
+
+                    </p>
+
+                </section>
+
+
+                <!-- ASK GREENPATH -->
+
+                <section class="side-card ask-card">
+
+                    <div class="side-title">
+
+                        <span>💬</span>
+
+                        <div>
+
+                            <h2>Ask GreenPath</h2>
+
+                            <p>
+                                Get quick answers about the Aadhaar form.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="questionButtons"
+                        class="question-buttons">
+                    </div>
+
+
+                    <div class="chat-area">
+
+                        <input
+                            type="text"
+                            id="questionInput"
+                            placeholder="Type your question...">
+
+                        <button
+                            type="button"
+                            onclick="askQuestion()">
+
+                            ➤
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="chatAnswer"
+                        class="chat-answer">
+                    </div>
+
+                </section>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/aadhaar-guide.js"></script>
+
+</body>
+
+</html>

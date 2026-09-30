@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenPath | Government Services</title>
+
+    <link rel="stylesheet" href="../css/government-services.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         GOVERNMENT SERVICES
+    ====================================================== -->
+
+    <section id="governmentScreen" class="screen">
+
+        <div class="page-header">
+
+            <button
+                class="back-button"
+                onclick="goToDashboard()">
+                ←
+            </button>
+
+            <div>
+
+                <h1>Government Services</h1>
+
+                <p>
+                    Choose the government service you need.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <!-- AADHAAR -->
+
+            <button
+                class="service-card"
+                onclick="openAadhaarGuide()">
+
+                <div class="service-icon">
+                    🪪
+                </div>
+
+                <h2>
+                    Aadhaar Services
+                </h2>
+
+                <p>
+                    Aadhaar update and related services
+                </p>
+
+            </button>
+
+
+            <!-- PAN -->
+
+            <button
+                class="service-card"
+                onclick="showComingSoon('PAN Services')">
+
+                <div class="service-icon">
+                    💳
+                </div>
+
+                <h2>
+                    PAN Services
+                </h2>
+
+                <p>
+                    PAN-related services
+                </p>
+
+            </button>
+
+
+            <!-- VOTER -->
+
+            <button
+                class="service-card"
+                onclick="showComingSoon('Voter Services')">
+
+                <div class="service-icon">
+                    🗳️
+                </div>
+
+                <h2>
+                    Voter Services
+                </h2>
+
+                <p>
+                    Voter ID related services
+                </p>
+
+            </button>
+
+
+            <!-- DRIVING LICENCE -->
+
+            <button
+                class="service-card"
+                onclick="showComingSoon('Driving Licence')">
+
+                <div class="service-icon">
+                    🚗
+                </div>
+
+                <h2>
+                    Driving Licence
+                </h2>
+
+                <p>
+                    Driving licence services
+                </p>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="../js/government-services.js"></script>
+
+</body>
+
+</html>

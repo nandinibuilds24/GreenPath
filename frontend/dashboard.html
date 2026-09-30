@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenPath | Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="nav-left">
+
+            <div class="brand">
+
+                <span class="brand-icon">🌿</span>
+
+                <div>
+                    <h1>GreenPath</h1>
+                    <p>Your simple path to every service</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="nav-actions">
+
+            <button class="nav-icon" type="button">
+                🔍
+            </button>
+
+            <button class="nav-icon" type="button">
+                🔔
+            </button>
+
+            <button
+                class="profile-button"
+                type="button"
+                onclick="openProfile()"
+            >
+
+                <span class="profile-avatar">
+                    👤
+                </span>
+
+                <span class="profile-user-info">
+
+                    <span
+                        id="userName"
+                        class="profile-name"
+                    >
+                        User
+                    </span>
+
+                    <span class="profile-label">
+                        My Profile
+                    </span>
+
+                </span>
+
+                <span class="profile-arrow">
+                    ▾
+                </span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard-container">
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="welcome-small">
+                    Welcome to GreenPath
+                </p>
+
+                <h2>
+                    Hello,
+                    <span id="welcomeName">
+                        User
+                    </span>
+                    👋
+                </h2>
+
+                <p class="welcome-text">
+                    Find the right service and get simple step-by-step guidance.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="serviceSearch"
+                    placeholder="Search for a service, exam or form..."
+                >
+
+            </div>
+
+            <div
+                id="searchResults"
+                class="search-results"
+            ></div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <section class="quick-actions">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Services
+                    </h2>
+
+                    <p>
+                        Choose a service to get started
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="action-grid">
+
+
+                <!-- 1. GOVERNMENT -->
+
+                <div
+                    class="action-card"
+                    onclick="openService('government')"
+                >
+
+                    <div class="action-icon">
+                        🏛️
+                    </div>
+
+                    <h3>
+                        Government Services
+                    </h3>
+
+                    <p>
+                        Get guidance for government forms and services.
+                    </p>
+
+                </div>
+
+
+                <!-- 2. EXAMS -->
+
+                <div
+                    class="action-card"
+                    onclick="openService('exams')"
+                >
+
+                    <div class="action-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Exams
+                    </h3>
+
+                    <p>
+                        Find exam applications, registrations and guidance.
+                    </p>
+
+                </div>
+
+
+                <!-- 3. BANKING -->
+
+                <div
+                    class="action-card"
+                    onclick="openService('banking')"
+                >
+
+                    <div class="action-icon">
+                        🏦
+                    </div>
+
+                    <h3>
+                        Banking
+                    </h3>
+
+                    <p>
+                        Get guidance for banking forms and services.
+                    </p>
+
+                </div>
+
+
+                <!-- 4. EDUCATION -->
+
+                <div
+                    class="action-card"
+                    onclick="openService('education')"
+                >
+
+                    <div class="action-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Education & Learning
+                    </h3>
+
+                    <p>
+                        Find guidance for education-related services.
+                    </p>
+
+                </div>
+
+
+                <!-- 5. SOCIAL MEDIA -->
+
+                <div
+                    class="action-card"
+                    onclick="openService('social')"
+                >
+
+                    <div class="action-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Social Media
+                    </h3>
+
+                    <p>
+                        Get guidance for social media apps and settings.
+                    </p>
+
+                </div>
+
+
+                <!-- 6. SAFETY -->
+
+                <div
+                    class="action-card"
+                    onclick="openService('safety')"
+                >
+
+                    <div class="action-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Safety Apps
+                    </h3>
+
+                    <p>
+                        Learn important safety and security settings.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENTLY VIEWED -->
+
+        <section class="recent-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Recently Viewed
+                    </h2>
+
+                    <p>
+                        Continue where you left off
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                id="recentlyViewed"
+                class="recent-grid"
+            >
+
+                <div class="empty-recent">
+
+                    <span>
+                        🕘
+                    </span>
+
+                    <p>
+                        No recently viewed services
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

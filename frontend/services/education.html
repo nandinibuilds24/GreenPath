@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenPath | Education & Learning</title>
+
+    <link rel="stylesheet" href="../css/education.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+
+    <button class="back-button" onclick="goBack()">
+        ← Back
+    </button>
+
+    <div class="brand">
+        <span>🌿</span>
+        <strong>GreenPath</strong>
+    </div>
+
+</header>
+
+
+<main class="education-container">
+
+
+    <!-- STEP 1 -->
+
+    <section id="studySection" class="section">
+
+        <h1>Education & Learning</h1>
+
+        <p class="description">
+            Choose what you are currently studying.
+        </p>
+
+        <div class="choice-grid">
+
+            <button class="choice-card"
+                    onclick="selectStudy('B.Tech')">
+
+                <span>🎓</span>
+
+                <h3>B.Tech</h3>
+
+                <p>Bachelor of Technology</p>
+
+            </button>
+
+
+            <button class="choice-card"
+                    onclick="selectStudy('Degree')">
+
+                <span>📚</span>
+
+                <h3>Degree</h3>
+
+                <p>Undergraduate Degree</p>
+
+            </button>
+
+
+            <button class="choice-card"
+                    onclick="selectStudy('Diploma')">
+
+                <span>📘</span>
+
+                <h3>Diploma</h3>
+
+                <p>Diploma courses</p>
+
+            </button>
+
+
+            <button class="choice-card"
+                    onclick="selectStudy('Intermediate')">
+
+                <span>🏫</span>
+
+                <h3>Intermediate</h3>
+
+                <p>11th / 12th</p>
+
+            </button>
+
+
+            <button class="choice-card"
+                    onclick="selectStudy('School')">
+
+                <span>📖</span>
+
+                <h3>School</h3>
+
+                <p>School education</p>
+
+            </button>
+
+
+            <button class="choice-card"
+                    onclick="selectStudy('Other')">
+
+                <span>✨</span>
+
+                <h3>Other</h3>
+
+                <p>Other studies</p>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STEP 2 -->
+
+    <section id="yearSection"
+             class="section hidden">
+
+        <button class="small-back"
+                onclick="showStudySection()">
+
+            ← Change study
+
+        </button>
+
+        <h1 id="studyTitle">
+            B.Tech
+        </h1>
+
+        <p class="description">
+            Which year are you studying?
+        </p>
+
+        <div class="year-grid">
+
+            <button onclick="selectYear('1st Year')">
+                1st Year
+            </button>
+
+            <button onclick="selectYear('2nd Year')">
+                2nd Year
+            </button>
+
+            <button onclick="selectYear('3rd Year')">
+                3rd Year
+            </button>
+
+            <button onclick="selectYear('4th Year')">
+                4th Year
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STEP 3 -->
+
+    <section id="learningSection"
+             class="section hidden">
+
+        <button class="small-back"
+                onclick="showYearSection()">
+
+            ← Change year
+
+        </button>
+
+        <h1 id="learningTitle">
+            B.Tech - 3rd Year
+        </h1>
+
+        <p class="description">
+            Choose a language or concept you want to develop.
+        </p>
+
+
+
+        <!-- LANGUAGES -->
+
+        <h2 class="category-title">
+            Programming Languages
+        </h2>
+
+        <div class="learning-grid">
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Python')">
+
+                <span class="topic-icon">
+                    🐍
+                </span>
+
+                <h3>Python</h3>
+
+                <p>
+                    Programming & development
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Java')">
+
+                <span class="topic-icon">
+                    ☕
+                </span>
+
+                <h3>Java</h3>
+
+                <p>
+                    Programming & OOP
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('C')">
+
+                <span class="topic-icon">
+                    C
+                </span>
+
+                <h3>C</h3>
+
+                <p>
+                    Programming fundamentals
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('C++')">
+
+                <span class="topic-icon">
+                    C++
+                </span>
+
+                <h3>C++</h3>
+
+                <p>
+                    Programming & DSA
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('JavaScript')">
+
+                <span class="topic-icon">
+                    JS
+                </span>
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Web development
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('SQL')">
+
+                <span class="topic-icon">
+                    SQL
+                </span>
+
+                <h3>SQL</h3>
+
+                <p>
+                    Database management
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- CORE CONCEPTS -->
+
+        <h2 class="category-title">
+            Core Concepts
+        </h2>
+
+        <div class="learning-grid">
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Data Structures & Algorithms')">
+
+                <span class="topic-icon">
+                    🧩
+                </span>
+
+                <h3>DSA</h3>
+
+                <p>
+                    Data Structures & Algorithms
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('DBMS')">
+
+                <span class="topic-icon">
+                    🗄️
+                </span>
+
+                <h3>DBMS</h3>
+
+                <p>
+                    Database concepts
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Operating Systems')">
+
+                <span class="topic-icon">
+                    💻
+                </span>
+
+                <h3>Operating Systems</h3>
+
+                <p>
+                    OS concepts
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Computer Networks')">
+
+                <span class="topic-icon">
+                    🌐
+                </span>
+
+                <h3>Computer Networks</h3>
+
+                <p>
+                    Networking concepts
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Object Oriented Programming')">
+
+                <span class="topic-icon">
+                    🧱
+                </span>
+
+                <h3>OOP</h3>
+
+                <p>
+                    Object-oriented programming
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+
+            <button class="learning-card"
+                    onclick="openTopic('Web Development')">
+
+                <span class="topic-icon">
+                    🌍
+                </span>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Frontend & backend
+                </p>
+
+                <span class="explore">
+                    Explore →
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STEP 4 : PYTHON CERTIFICATIONS -->
+
+    <section id="certificationSection"
+             class="section hidden">
+
+        <button class="small-back"
+                onclick="showLearningSection()">
+
+            ← Back to learning
+
+        </button>
+
+        <div class="topic-header">
+
+            <div class="big-topic-icon">
+                🐍
+            </div>
+
+            <div>
+
+                <h1>Python Certifications</h1>
+
+                <p>
+                    Explore recognized certification
+                    paths and use the official website
+                    as the source of current information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="certification-grid">
+
+
+            <!-- PCEP -->
+
+            <article class="certification-card">
+
+                <div class="cert-level">
+                    ENTRY
+                </div>
+
+                <h2>
+                    PCEP
+                </h2>
+
+                <h3>
+                    Certified Entry-Level
+                    Python Programmer
+                </h3>
+
+                <p>
+                    A starting certification for
+                    fundamental Python programming
+                    knowledge.
+                </p>
+
+                <div class="cert-actions">
+
+                    <button
+                        onclick="openOfficial(
+                            'https://pythoninstitute.org/pcep'
+                        )">
+
+                        Official Website ↗
+
+                    </button>
+
+                    <button
+                        class="guide-button"
+                        onclick="openCertificationGuide('PCEP')">
+
+                        GreenPath Guide
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PCAP -->
+
+            <article class="certification-card">
+
+                <div class="cert-level associate">
+                    ASSOCIATE
+                </div>
+
+                <h2>
+                    PCAP
+                </h2>
+
+                <h3>
+                    Certified Associate
+                    Python Programmer
+                </h3>
+
+                <p>
+                    An associate-level Python
+                    programming certification covering
+                    intermediate concepts.
+                </p>
+
+                <div class="cert-actions">
+
+                    <button
+                        onclick="openOfficial(
+                            'https://pythoninstitute.org/pcap'
+                        )">
+
+                        Official Website ↗
+
+                    </button>
+
+                    <button
+                        class="guide-button"
+                        onclick="openCertificationGuide('PCAP')">
+
+                        GreenPath Guide
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PCPP1 -->
+
+            <article class="certification-card">
+
+                <div class="cert-level professional">
+                    PROFESSIONAL
+                </div>
+
+                <h2>
+                    PCPP1
+                </h2>
+
+                <h3>
+                    Certified Professional
+                    Python Programmer 1
+                </h3>
+
+                <p>
+                    A professional-level certification
+                    covering advanced Python programming.
+                </p>
+
+                <div class="cert-actions">
+
+                    <button
+                        onclick="openOfficial(
+                            'https://pythoninstitute.org/pcpp1'
+                        )">
+
+                        Official Website ↗
+
+                    </button>
+
+                    <button
+                        class="guide-button"
+                        onclick="openCertificationGuide('PCPP1')">
+
+                        GreenPath Guide
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="source-note">
+
+            🌿 <strong>GreenPath principle:</strong>
+
+            Official certification websites are the
+            source of truth. GreenPath helps you
+            understand and navigate them.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STEP 5 : WEBSITE GUIDE -->
+
+    <section id="guideSection"
+             class="section hidden">
+
+        <button class="small-back"
+                onclick="showCertificationSection()">
+
+            ← Back to certifications
+
+        </button>
+
+
+        <div class="guide-title">
+
+            <div class="big-topic-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h1 id="guideTitle">
+                    PCAP Website Guide
+                </h1>
+
+                <p id="guideSubtitle">
+                    Learn where to find information
+                    on the official website.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- OFFICIAL WEBSITE -->
+
+        <div class="guide-card">
+
+            <div class="guide-card-header">
+
+                <div>
+
+                    <h2>
+                        🌐 Official Website
+                    </h2>
+
+                    <p>
+                        Always verify current
+                        information on the official
+                        provider website.
+                    </p>
+
+                </div>
+
+                <button
+                    id="guideOfficialButton"
+                    onclick="openSelectedOfficial()">
+
+                    Open Official Website ↗
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WEBSITE BLUEPRINT -->
+
+        <div class="guide-card">
+
+            <h2>
+                🧭 Website Blueprint
+            </h2>
+
+            <p class="guide-description">
+
+                This is a GreenPath navigation preview.
+                It shows the type of sections to look
+                for on the official website.
+
+            </p>
+
+
+            <div class="website-blueprint">
+
+                <div class="website-top">
+
+                    <strong>
+                        Python Institute
+                    </strong>
+
+                    <span>
+                        Certifications
+                    </span>
+
+                    <span>
+                        Training
+                    </span>
+
+                </div>
+
+
+                <div class="website-body">
+
+                    <div class="website-heading">
+                        <span id="blueprintCertification">
+                            PCAP Certification
+                        </span>
+                    </div>
+
+
+                    <div class="website-option"
+                         onclick="showGuideMessage('exam')">
+
+                        <span>
+                            ①
+                        </span>
+
+                        <strong>
+                            Exam Information
+                        </strong>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="website-option"
+                         onclick="showGuideMessage('syllabus')">
+
+                        <span>
+                            ②
+                        </span>
+
+                        <strong>
+                            Exam Syllabus
+                        </strong>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="website-option"
+                         onclick="showGuideMessage('cost')">
+
+                        <span>
+                            ③
+                        </span>
+
+                        <strong>
+                            Cost
+                        </strong>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <div class="website-option"
+                         onclick="showGuideMessage('registration')">
+
+                        <span>
+                            ④
+                        </span>
+
+                        <strong>
+                            Registration / Booking
+                        </strong>
+
+                        <span>
+                            →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EXACT LOCATION -->
+
+        <div class="guide-card">
+
+            <h2>
+                📍 Where exactly do I look?
+            </h2>
+
+            <div id="locationGuide"
+                 class="location-guide">
+
+                Select a section above to see
+                GreenPath's navigation guidance.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORM GUIDE -->
+
+        <div class="guide-card">
+
+            <h2>
+                📝 Form / Registration Guide
+            </h2>
+
+            <p class="guide-description">
+
+                When the official provider opens an
+                application or registration form,
+                GreenPath can guide the user field
+                by field.
+
+            </p>
+
+
+            <div class="form-blueprint">
+
+                <div class="form-title">
+                    Official Registration
+                </div>
+
+
+                <div class="field-row">
+
+                    <div class="field-number">
+                        ①
+                    </div>
+
+                    <div class="field-content">
+
+                        <strong>
+                            Candidate Name
+                        </strong>
+
+                        <div class="fake-input">
+                            Enter your name
+                        </div>
+
+                        <small>
+                            GreenPath explains what this
+                            field asks for.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field-row">
+
+                    <div class="field-number">
+                        ②
+                    </div>
+
+                    <div class="field-content">
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <div class="fake-input">
+                            Enter your email
+                        </div>
+
+                        <small>
+                            Use an email address you can access.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field-row">
+
+                    <div class="field-number">
+                        ③
+                    </div>
+
+                    <div class="field-content">
+
+                        <strong>
+                            Country
+                        </strong>
+
+                        <div class="fake-input">
+                            Select country ▼
+                        </div>
+
+                        <small>
+                            Choose the applicable country.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field-row">
+
+                    <div class="field-number">
+                        ④
+                    </div>
+
+                    <div class="field-content">
+
+                        <strong>
+                            Exam / Certification
+                        </strong>
+
+                        <div class="fake-input">
+                            Select certification ▼
+                        </div>
+
+                        <small>
+                            Select the certification you
+                            intend to take.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="privacy-note">
+
+                🔒 <strong>Privacy:</strong>
+
+                GreenPath should guide users without
+                requiring them to upload Aadhaar, PAN,
+                passport, bank-card or other sensitive
+                documents.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CHAT -->
+
+        <div class="chat-card">
+
+            <div class="chat-header">
+
+                <div>
+
+                    <span>
+                        🌿
+                    </span>
+
+                    <strong>
+                        GreenPath Assistant
+                    </strong>
+
+                </div>
+
+                <span class="online">
+                    ● Guide Mode
+                </span>
+
+            </div>
+
+
+            <div id="chatMessages"
+                 class="chat-messages">
+
+                <div class="bot-message">
+
+                    I can help you navigate the official
+                    website for
+                    <strong id="chatCertification">
+                        PCAP
+                    </strong>.
+
+                    <br><br>
+
+                    Ask me where to find the syllabus,
+                    cost, registration or what a field means.
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-questions">
+
+                <button onclick="askGuideQuestion('syllabus')">
+                    Where is the syllabus?
+                </button>
+
+                <button onclick="askGuideQuestion('cost')">
+                    Where is the fee?
+                </button>
+
+                <button onclick="askGuideQuestion('registration')">
+                    Where do I register?
+                </button>
+
+                <button onclick="askGuideQuestion('eligibility')">
+                    Am I eligible?
+                </button>
+
+                <button onclick="askGuideQuestion('documents')">
+                    What do I need?
+                </button>
+
+                <button onclick="askGuideQuestion('field')">
+                    What do I write here?
+                </button>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <button class="mic-button">
+                    🎤
+                </button>
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Ask GreenPath..."
+                >
+
+                <button
+                    class="send-button"
+                    onclick="sendGuideMessage()">
+
+                    ➤
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="../js/education.js"></script>
+
+</body>
+
+</html>

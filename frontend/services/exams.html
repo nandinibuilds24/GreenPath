@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPath | Exams</title>
+    <link rel="stylesheet" href="../css/exams.css">
+</head>
+<body>
+    <main class="exams-page">
+        <header class="page-header">
+            <button
+                type="button"
+                class="back-button"
+                onclick="goBack()"
+            >
+                ← Back
+            </button>
+            <div>
+                <h1>Exams</h1>
+                <p>
+                    Find exam applications, registrations and guidance.
+                </p>
+            </div>
+        </header>
+        <section class="exam-section">
+            <div class="section-heading">
+                <h2>
+                    Exams for You
+                </h2>
+                <p>
+                    Select an exam to get step-by-step guidance.
+                </p>
+            </div>
+            <div class="exam-grid">
+                <!-- GATE CARD -->
+                <div
+                    class="exam-card gate-card"
+                    onclick="openGateGuide()"
+                >
+                    <div class="exam-icon">
+                        🎓
+                    </div>
+                    <div class="exam-content">
+                        <h3>
+                            GATE
+                        </h3>
+                        <p>
+                            Graduate Aptitude Test in Engineering
+                        </p>
+                        <span class="exam-action">
+                            Open GATE Guide →
+                        </span>
+                    </div>
+                </div>
+                <!-- TCS NQT CARD -->
+                <div
+                    class="exam-card"
+                    onclick="openExamGuide('TCS NQT')"
+                >
+                    <div class="exam-icon">
+                        💼
+                    </div>
+                    <div class="exam-content">
+                        <h3>
+                            TCS NQT
+                        </h3>
+                        <p>
+                            National Qualifier Test
+                        </p>
+                        <span class="exam-action">
+                            View Guidance →
+                        </span>
+                    </div>
+                </div>
+                <!-- PCEP CARD -->
+                <div
+                    class="exam-card"
+                    onclick="openExamGuide('PCEP')"
+                >
+                    <div class="exam-icon">
+                        🐍
+                    </div>
+                    <div class="exam-content">
+                        <h3>
+                            PCEP
+                        </h3>
+                        <p>
+                            Certified Entry-Level Python Programmer
+                        </p>
+                        <span class="exam-action">
+                            View Guidance →
+                        </span>
+                    </div>
+                </div>
+                <!-- PCAP CARD -->
+                <div
+                    class="exam-card"
+                    onclick="openExamGuide('PCAP')"
+                >
+                    <div class="exam-icon">
+                        🐍
+                    </div>
+                    <div class="exam-content">
+                        <h3>
+                            PCAP
+                        </h3>
+                        <p>
+                            Certified Associate Python Programmer
+                        </p>
+                        <span class="exam-action">
+                            View Guidance →
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/exams.js"></script>
+</body>
+</html>

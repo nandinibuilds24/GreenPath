@@ -1,0 +1,1087 @@
+/* =========================================
+   GREENPATH DASHBOARD
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #174b2d;
+
+    background-image:
+        linear-gradient(
+            rgba(248, 247, 226, 0.70),
+            rgba(248, 247, 226, 0.78)
+        ),
+        url("../assets/images/greenpath-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 78px;
+
+    padding: 12px 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-bottom: 1px solid #dfe9dc;
+
+    box-shadow:
+        0 4px 18px rgba(50, 90, 60, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* =========================================
+   BRAND
+   ========================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e3f0df;
+
+    border: 1px solid #d1e4cc;
+
+    border-radius: 13px;
+
+    font-size: 24px;
+}
+
+.brand h1 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #174b2d;
+}
+
+.brand p {
+    margin-top: 3px;
+
+    font-size: 11px;
+    color: #789080;
+}
+
+
+/* =========================================
+   NAV ACTIONS
+   ========================================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #d8e6d4;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 11px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.nav-icon:hover {
+    background: #f4f9f2;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(50, 90, 60, 0.10);
+}
+
+
+/* =========================================
+   PROFILE BUTTON
+   ========================================= */
+
+.profile-button {
+    border: 1px solid #d8e6d4;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    min-width: 180px;
+
+    padding: 7px 12px 7px 8px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    color: #174b2d;
+
+    text-align: left;
+
+    box-shadow:
+        0 4px 12px rgba(50, 90, 60, 0.08);
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.profile-button:hover {
+    background: #f7fbf5;
+
+    box-shadow:
+        0 7px 18px rgba(50, 90, 60, 0.13);
+
+    transform: translateY(-1px);
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e3f0df;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+.profile-user-info {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.profile-name {
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #174b2d;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-label {
+    margin-top: 2px;
+
+    font-size: 11px;
+
+    color: #789080;
+}
+
+.profile-arrow {
+    font-size: 16px;
+    color: #52745d;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+   ========================================= */
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 42px 28px 70px;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+   ========================================= */
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.welcome-small {
+    font-size: 13px;
+
+    color: #6c8975;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.welcome-section h2 {
+    font-size: 31px;
+
+    line-height: 1.2;
+
+    color: #174b2d;
+}
+
+.welcome-text {
+    margin-top: 9px;
+
+    font-size: 14px;
+
+    color: #6f8075;
+}
+
+
+/* =========================================
+   SEARCH SECTION
+   ========================================= */
+
+.search-section {
+    width: 100%;
+
+    margin-bottom: 38px;
+
+    position: relative;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 760px;
+
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid #d7e5d3;
+
+    border-radius: 14px;
+
+    padding: 0 18px;
+
+    box-shadow:
+        0 6px 20px rgba(50, 90, 60, 0.08);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.search-box:focus-within {
+    border-color: #7ca889;
+
+    box-shadow:
+        0 7px 22px rgba(50, 90, 60, 0.13);
+}
+
+.search-icon {
+    font-size: 19px;
+
+    margin-right: 12px;
+
+    opacity: 0.75;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: #174b2d;
+}
+
+.search-box input::placeholder {
+    color: #9aa79e;
+}
+
+
+/* =========================================
+   SEARCH RESULTS
+   ========================================= */
+
+.search-results {
+    display: none;
+
+    position: absolute;
+
+    top: 63px;
+    left: 0;
+
+    width: 100%;
+    max-width: 760px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce8d9;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 12px 30px rgba(50, 90, 60, 0.14);
+
+    overflow: hidden;
+
+    z-index: 50;
+}
+
+.search-result-item {
+    min-height: 52px;
+
+    padding: 13px 17px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #edf2eb;
+
+    color: #174b2d;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: #f4f9f2;
+}
+
+.search-result-icon {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e9f3e5;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+}
+
+.no-results {
+    padding: 18px;
+
+    text-align: center;
+
+    color: #7a8b80;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+
+    color: #174b2d;
+}
+
+.section-heading p {
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    color: #7a8b80;
+}
+
+
+/* =========================================
+   SERVICES
+   ========================================= */
+
+.quick-actions {
+    margin-bottom: 48px;
+}
+
+
+/* =========================================
+   SERVICE CARD GRID
+   ========================================= */
+
+.action-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   SERVICE CARD
+   ========================================= */
+
+.action-card {
+    min-height: 185px;
+
+    padding: 24px 22px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid #dce8d9;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 22px rgba(50, 90, 60, 0.08);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+
+    background: #ffffff;
+
+    border-color: #bfd6ba;
+
+    box-shadow:
+        0 13px 30px rgba(50, 90, 60, 0.14);
+}
+
+.action-card:active {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SERVICE ICON
+   ========================================= */
+
+.action-icon {
+    width: 51px;
+    height: 51px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    background: #e6f1e2;
+
+    border: 1px solid #d4e5cf;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   SERVICE TITLE
+   ========================================= */
+
+.action-card h3 {
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    color: #174b2d;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   SERVICE DESCRIPTION
+   ========================================= */
+
+.action-card p {
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    color: #718178;
+}
+
+
+/* =========================================
+   RECENTLY VIEWED
+   ========================================= */
+
+.recent-section {
+    margin-top: 10px;
+}
+
+.recent-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   RECENT CARD
+   ========================================= */
+
+.recent-card {
+    min-height: 82px;
+
+    padding: 14px 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid #dce8d9;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(50, 90, 60, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.recent-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c4d9bf;
+
+    box-shadow:
+        0 9px 22px rgba(50, 90, 60, 0.11);
+}
+
+
+/* =========================================
+   RECENT ICON
+   ========================================= */
+
+.recent-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf5e9;
+
+    border-radius: 11px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   RECENT INFORMATION
+   ========================================= */
+
+.recent-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.recent-info h3 {
+    font-size: 14px;
+
+    color: #174b2d;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.recent-info p {
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    color: #829187;
+}
+
+
+/* =========================================
+   RECENT ARROW
+   ========================================= */
+
+.recent-arrow {
+    font-size: 19px;
+
+    color: #5c8066;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   EMPTY RECENTLY VIEWED
+   ========================================= */
+
+.empty-recent {
+    min-height: 125px;
+
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px dashed #cbdcc6;
+
+    border-radius: 16px;
+
+    color: #809087;
+}
+
+.empty-recent span {
+    font-size: 26px;
+
+    margin-bottom: 8px;
+
+    opacity: 0.75;
+}
+
+.empty-recent p {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 12px 25px;
+    }
+
+    .dashboard-container {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .action-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .recent-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        min-height: 67px;
+
+        padding: 10px 15px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-icon {
+        width: 39px;
+        height: 39px;
+
+        border-radius: 11px;
+
+        font-size: 20px;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+    .brand p {
+        display: none;
+    }
+
+
+    .nav-actions {
+        gap: 6px;
+    }
+
+    .nav-icon {
+        width: 35px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+
+    /* PROFILE */
+
+    .profile-button {
+        min-width: auto;
+
+        padding: 5px 7px;
+
+        border-radius: 11px;
+    }
+
+    .profile-avatar {
+        width: 35px;
+        height: 35px;
+
+        font-size: 17px;
+    }
+
+    .profile-user-info {
+        display: none;
+    }
+
+    .profile-arrow {
+        display: none;
+    }
+
+
+    /* MAIN */
+
+    .dashboard-container {
+        padding:
+            28px 15px 50px;
+    }
+
+
+    /* WELCOME */
+
+    .welcome-section {
+        margin-bottom: 22px;
+    }
+
+    .welcome-small {
+        font-size: 12px;
+    }
+
+    .welcome-section h2 {
+        font-size: 25px;
+    }
+
+    .welcome-text {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* SEARCH */
+
+    .search-section {
+        margin-bottom: 30px;
+    }
+
+    .search-box {
+        height: 50px;
+
+        padding: 0 14px;
+
+        border-radius: 12px;
+    }
+
+    .search-icon {
+        font-size: 17px;
+
+        margin-right: 9px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-results {
+        top: 58px;
+
+        border-radius: 11px;
+    }
+
+
+    /* SECTION HEADING */
+
+    .section-heading {
+        margin-bottom: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+
+    /* SERVICES */
+
+    .quick-actions {
+        margin-bottom: 38px;
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+    }
+
+    .action-card {
+        min-height: auto;
+
+        padding: 18px;
+
+        border-radius: 15px;
+
+        display: grid;
+
+        grid-template-columns:
+            48px 1fr;
+
+        column-gap: 13px;
+
+        align-items: center;
+    }
+
+    .action-icon {
+        width: 48px;
+        height: 48px;
+
+        grid-row: span 2;
+
+        margin-bottom: 0;
+
+        border-radius: 12px;
+
+        font-size: 22px;
+    }
+
+    .action-card h3 {
+        margin-bottom: 3px;
+
+        font-size: 16px;
+    }
+
+    .action-card p {
+        font-size: 12px;
+
+        line-height: 1.45;
+    }
+
+
+    /* RECENT */
+
+    .recent-grid {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .recent-card {
+        min-height: 74px;
+
+        padding: 12px;
+
+        border-radius: 12px;
+    }
+
+    .recent-icon {
+        width: 39px;
+        height: 39px;
+
+        border-radius: 10px;
+
+        font-size: 18px;
+    }
+
+    .recent-info h3 {
+        font-size: 13px;
+    }
+
+    .recent-info p {
+        font-size: 10px;
+    }
+
+    .recent-arrow {
+        font-size: 17px;
+    }
+
+    .empty-recent {
+        min-height: 110px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 430px) {
+
+    .navbar {
+        padding:
+            9px 11px;
+    }
+
+    .brand h1 {
+        font-size: 17px;
+    }
+
+    .nav-icon {
+        display: none;
+    }
+
+    .dashboard-container {
+        padding:
+            24px 12px 45px;
+    }
+
+    .welcome-section h2 {
+        font-size: 23px;
+    }
+
+    .welcome-text {
+        max-width: 320px;
+    }
+
+    .action-card {
+        padding: 16px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+button:focus-visible,
+.action-card:focus-visible,
+.recent-card:focus-visible,
+input:focus-visible {
+    outline: 2px solid #5d8b68;
+
+    outline-offset: 2px;
+}
