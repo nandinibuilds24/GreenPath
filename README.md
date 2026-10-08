@@ -220,7 +220,7 @@ cd backend
 pip install -r requirements.txt
 python app.py
 ```
-Backend:http://127.0.0.1:5000
+Backend:https://greenpath-rxv3.onrender.com
 
 Keep this terminal running.
 
