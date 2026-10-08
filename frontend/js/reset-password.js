@@ -54,7 +54,7 @@ resetPasswordForm.addEventListener(
         try {
             const response =
                 await fetch(
-                    "http://127.0.0.1:5000/api/reset-password",
+                    "https://greenpath-rxv3.onrender.com/api/reset-password",
                     {
                         method: "POST",
                         headers: {

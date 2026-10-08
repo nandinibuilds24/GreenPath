@@ -35,7 +35,7 @@ forgotPasswordForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:5000/api/send-otp",
+                    "https://greenpath-rxv3.onrender.com/api/send-otp",
                     {
                         method: "POST",
 

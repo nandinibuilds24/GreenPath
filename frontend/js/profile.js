@@ -10,7 +10,7 @@ async function loadProfile() {
     try {
         const response =
             await fetch(
-                `http://127.0.0.1:5000/api/profile/${userId}`
+                `https://greenpath-rxv3.onrender.com/api/profile/${userId}`
             );
         const result =
             await response.json();
